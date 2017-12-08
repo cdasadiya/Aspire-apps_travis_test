@@ -6,13 +6,13 @@
 #
 ##############################################################################
 {
-    'name' : 'Today Filters',
-    'version' : '1.0',
-    'author' : 'Aspire Apps',
+    'name': 'Today Filters',
+    'version': '1.0',
+    'author': 'Aspire Apps',
     'website': 'www.ru3ix.com.au',
-    'category' :'base',
-    'summary':'Today Filters on Search Views',
-    'description' : """This Module will set Today filter in search view in following menus.
+    'category': 'base',
+    'summary': 'Today Filters on Search Views',
+    'description':  """This Module will set Today filter in search view in following menus.
                         * Sales Quotations & Purchase Quotations
                         * Sales Orders
                         * Purchase Orders
@@ -24,8 +24,8 @@
                         * Sales Payment
                         * Purchases Payment 
                        """,
-    'price' : 20,
-    'currency' : 'EUR',
+    'price': 20,
+    'currency': 'EUR',
     'depends': ['account_voucher','stock_account','sale_management','purchase'],
     'data': ['views/current_date_view.xml'],
     'installable': True,
