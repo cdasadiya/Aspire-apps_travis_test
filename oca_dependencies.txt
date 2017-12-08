@@ -1,0 +1,1 @@
+maintainer-quality-tools https://github.com/OCA/maintainer-quality-tools/
