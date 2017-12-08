@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<openerp>
+    <data> 
+        <record id="r3x_sale_weight_sale_order_form_view" model="ir.ui.view">
+            <field name="name">sale.weight.sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+		        <xpath expr="//field[@name='order_line']/form//label[@for='customer_lead']" position="before">
+	                <field name="th_weight"/>
+		        </xpath>
+		        
+		        <xpath expr="//field[@name='order_line']/tree//field[@name='state']" position="after">
+	                <field name="th_weight" invisible="1"/>
+		        </xpath>
+		        
+		        <xpath expr="//group[@name='sale_total']" position="after">
+		            <group name="sale_weight">
+		                <field name="weight" widget='monetary' groups="base.group_user"/>
+		            </group>
+		        </xpath>			
+	        </field>
+	    </record>
+	    
+	 </data>
+</openerp>  

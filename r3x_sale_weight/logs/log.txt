@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+##############################################################################
+#    Copyright (c) 2017 RU3IX Pvt. Ltd.
+#    (http://www.ru3ix.com.au)
+#    info@ru3ix.com.au
+#
+##############################################################################
+
+Devaloped in odoo 10.0
+----------------------
+This module will add Weight in Sale Order screen.
+
+

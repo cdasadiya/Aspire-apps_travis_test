@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!-- Stock Operations  -->
+		<record id="r3x_view_picking_int_search_inherit" model="ir.ui.view">
+			<field name="name">stock.int.search.inherit</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_internal_search"/>
+				<field name="arch" type="xml">
+					<xpath expr="//filter[@name='backorder']" position="after">
+						<filter icon="terp-accessories-archiver-minus" name="today" string="Today" domain="[('date','>=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'00:00:00'),('date','&lt;=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'23:59:59')]"/>
+					</xpath>
+				</field>
+		</record>
+
+		<!-- Sale Order -->
+		<record id="r3x_view_today_sale_search_inherit" model="ir.ui.view">
+			<field name="name">sale.today.search.inherit</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_sales_order_filter"/>
+				<field name="arch" type="xml">
+					<xpath expr="//filter[@name='my_sale_orders_filter']" position="after">
+						<filter icon="terp-accessories-archiver-minus" name="today" string="Today" domain="[('date_order','>=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'00:00:00'),('date_order','&lt;=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'23:59:59')]"/>
+					</xpath>
+				</field>
+		</record>
+
+        <!--Purchase order -->
+		<record id="r3x_view_today_purchase_search_inherit" model="ir.ui.view">
+			<field name="name">purchase.today.search.inherit</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+				<field name="arch" type="xml">
+					<xpath expr="//filter[@name='message_needaction']" position="after">
+						<filter icon="terp-accessories-archiver-minus" name="today" string="Today" domain="[('date_order','>=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'00:00:00'),('date_order','&lt;=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'23:59:59')]"/>
+					</xpath>
+				</field>
+		</record>
+		
+		<!-- Payments -->
+		<record id="r3x_view_today_payment_search_inherit" model="ir.ui.view">
+			<field name="name">payment.today.search.inherit</field>
+			<field name="model">account.payment</field>
+			<field name="inherit_id" ref="account.view_account_payment_search"/>
+				<field name="arch" type="xml">
+					<xpath expr="//filter[@name='state_sent']" position="before">
+						<filter icon="terp-accessories-archiver-minus" name="today" string="Today" domain="[('payment_date','>=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'00:00:00'),('payment_date','&lt;=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'23:59:59')]"/>
+					</xpath>
+				</field>
+		</record>
+
+       <!-- Refunds Payments -->
+		<record id="r3x_view_today_invoice_search_inherit" model="ir.ui.view">
+			<field name="name">account.invoice.search.inherit</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.view_account_invoice_filter"/>
+				<field name="arch" type="xml">
+					<xpath expr="//filter[@name='late']" position="after">
+						<filter icon="terp-accessories-archiver-minus" name="today" string="Today" domain="[('date_invoice','>=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'00:00:00'),('date_invoice','&lt;=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'23:59:59')]"/>
+					</xpath>
+				</field>
+		</record>
+
+		<!-- Sales Receipts -->
+		<record id="r3x_view_today_sale_receipts_search_inherit" model="ir.ui.view">
+			<field name="name">cust.sale.reciepts.today.search.inherit</field>
+			<field name="model">account.voucher</field>
+			<field name="inherit_id" ref="account_voucher.view_voucher_filter_sale"/>
+				<field name="arch" type="xml">
+					<xpath expr="//field[@name='date']" position="after">
+						<filter icon="terp-accessories-archiver-minus" name="today" string="Today" domain="[('date','>=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'00:00:00'),('date','&lt;=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'23:59:59')]"/>
+					</xpath>
+				</field>
+		</record>
+		
+		
+		<!-- Purchase Receipts -->
+		<record id="r3x_view_today_purchase_receipts_search_inherit" model="ir.ui.view">
+			<field name="name">supplier.purchase.receipts.today.search.inherit</field>
+			<field name="model">account.voucher</field>
+			<field name="inherit_id" ref="account_voucher.view_voucher_filter_vendor"/>
+				<field name="arch" type="xml">
+					<xpath expr="//field[@name='date']" position="after">
+						<filter icon="terp-accessories-archiver-minus" name="today" string="Today" domain="[('date','>=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'00:00:00'),('date','&lt;=', ((context_today()).strftime('%%Y-%%m-%%d'))+' '+'23:59:59')]"/>
+					</xpath>
+				</field>
+		</record>
+
+	</data>
+</odoo>
