@@ -9,13 +9,13 @@
     'name': 'Sales Weight',
     'version': '1.0',
     'category': 'sale',
-    'summary':'Sales Weight Display',
+    'summary': 'Sales Weight Display',
     'description': """
                     This module will add Weight in Sale Order screen.
                    """,    
     'author': 'Aspire Apps',
-    'price':18,
-    'currency':'EUR',
+    'price': 18,
+    'currency': 'EUR',
     'website': 'www.ru3ix.com.au',
     'depends': ['sale_management'],
     'data': [
