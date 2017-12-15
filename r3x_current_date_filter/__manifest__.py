@@ -22,9 +22,12 @@
                         * Purchase Receipts
                         * Sales Payment
                         * Purchases Payment""",
-    'price': 20,   
+    'price': 20,
     'currency': 'EUR',
-    'depends': ['account_voucher', 'stock_account', 'sale_management', 'purchase'],  
+    'depends': ['account_voucher', 
+        'stock_account', 
+        'sale_management', 
+        'purchase'],
     'data': ['views/current_date_view.xml'],
     'installable': True,
     'auto_install': False,

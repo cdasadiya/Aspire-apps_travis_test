@@ -1,15 +1,15 @@
-##############################################################################
+#########################################
 #    Copyright (c) 2017 RU3IX Pvt. Ltd.
 #    (http://www.ru3ix.com.au)
 #    info@ru3ix.com.au
 #
-##############################################################################
+#########################################
 {
     'name': 'Sales Weight',
     'version': '1.0',
     'category': 'sale',
     'summary': 'Sales Weight Display',
-    'description': """ This module will add Weight in Sale Order screen. """,    
+    'description': """ This module will add Weight in Sale Order screen. """,
     'author': 'Aspire Apps',
     'price': 18,
     'currency': 'EUR',
@@ -19,4 +19,4 @@
     'installable': True,
     'auto_install': False,
     'application': True,
-  }
+    }

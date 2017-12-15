@@ -14,10 +14,12 @@ class sale_order(models.Model):
             for line in sale.order_line:
                 self.weight += line.th_weight
 
-    weight = fields.Float(compute='_cal_weight', string='Weight',digits=dp.get_precision('Stock Weight'))
+    weight = fields.Float(compute='_cal_weight', string='Weight', digits=dp.get_precision('Stock Weight'))
 
 
 class sale_order_line(models.Model):
     """ Sale order Lines"""
     _inherit = 'sale.order.line'
-    th_weight = fields.Float(string='Weight', readonly=True, states={'draft': [('readonly', False)]}, digits=dp.get_precision('Stock Weight'))
+    th_weight = fields.Float(string='Weight', readonly=True, 
+    states={'draft': [('readonly', False)]},      
+    digits=dp.get_precision('Stock Weight'))
