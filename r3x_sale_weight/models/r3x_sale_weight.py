@@ -23,4 +23,4 @@ class sale_order_line(models.Model):
     
     th_weight = fields.Float(string='Weight', readonly=True, states={'draft': [('readonly', False)]}, digits=dp.get_precision('Stock Weight'))
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+#vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
