@@ -1,5 +1,4 @@
-#-*- coding: utf-8 -*-
-#Part of RU3IX.See __openerp__.py file for full copyright and licensing details.
+#Part of RU3IX.See __manifest__.py file for full copyright and licensing details.
 from openerp import models, fields, api
 import openerp.addons.decimal_precision as dp
 class sale_order(models.Model):
