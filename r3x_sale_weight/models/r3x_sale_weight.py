@@ -18,8 +18,8 @@ class sale_order(models.Model):
 
     weight = fields.Float(
         compute='_cal_weight',
-            string='Weight',
-                digits=dp.get_precision('Stock Weight'))
+        string='Weight',
+        digits=dp.get_precision('Stock Weight'))
 
 
 class sale_order_line(models.Model):
@@ -27,6 +27,6 @@ class sale_order_line(models.Model):
     _inherit = 'sale.order.line'
     th_weight = fields.Float(
         string='Weight',
-            readonly=True,
-                states={'draft': [('readonly', False)]},
-                    digits=dp.get_precision('Stock Weight'))
+        readonly=True,
+        states={'draft': [('readonly', False)]},
+        digits=dp.get_precision('Stock Weight'))
