@@ -1,5 +1,5 @@
 ##############################################################################
-#    Copyright (c) 2017 RU3IX Pvt. Ltd.
+#    Copyright (c) 2018 RU3IX Pvt. Ltd.
 #    (http://www.ru3ix.com.au)
 #    info@ru3ix.com.au
 #
@@ -25,7 +25,7 @@
     'price': 20,
     'currency': 'EUR',
     'depends': [
-    'account_voucher', 'stock_account', 'sale_management', 'purchase'],
+        'account_voucher', 'stock_account', 'sale_management', 'purchase'],
     'data': ['views/current_date_view.xml'],
     'installable': True,
     'auto_install': False,
