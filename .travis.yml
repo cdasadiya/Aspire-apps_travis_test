@@ -3,6 +3,8 @@ language: python
 python:
   - 3.5.4
 
+sudo: enabled
+
 cache: pip
 
 addons:
@@ -14,6 +16,9 @@ addons:
       - libxmlsec1-dev
       - libxslt-dev
       - python-libxml2
+
+
+
 env:
   - VERSION="11.0" LINT_CHECK="1"
   - VERSION="11.0" ODOO_REPO="odoo/odoo" LINT_CHECK="0"
