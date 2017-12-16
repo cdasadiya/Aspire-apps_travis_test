@@ -10,10 +10,6 @@ cache: pip
 addons:
   apt:
     packages:
-      - npm install
-      - npm cache clean
-      - npm install -g npm
-      - npm install
       - expect-dev  # provides unbuffer utility
       - python-lxml  # because pip installation is slow
       - libxml2-dev
